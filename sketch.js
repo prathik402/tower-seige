@@ -13,6 +13,8 @@ var square6
 var square7
 var sqaure8
 var square9
+var slingshot1
+var polygon1
 
 
 
@@ -34,6 +36,8 @@ function setup(){
     square7 = new Box(300,485,30,30);
     square8 = new Box(330,485,30,30);
     square9 = new Box(300,455,30,30);
+    polygon1 = new Polygon(100,300,40,40)
+    slingshot1 = new Slingshot(polygon1.body,{x: 100, y:300});
 }
 
 
@@ -54,7 +58,10 @@ square6.display();
 square7.display();
 square8.display();
 square9.display();
-
+polygon1.display();
+slingshot1.display();
+mouseDragged();
+mouseReleased();
 
 
 
@@ -62,12 +69,12 @@ square9.display();
 drawSprites()
 
 function mouseDragged(){
-    Matter.Body.setPosition(stone.body, {x: mouseX , y: mouseY});
+    Matter.Body.setPosition(polygon1.body, {x: mouseX , y: mouseY});
   }
   
   
   function mouseReleased(){
-    slingshot.fly();
+    slingshot1.fly();
   }
   
   
