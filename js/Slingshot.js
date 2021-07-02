@@ -1,4 +1,4 @@
-class SlingShot{
+class Slingshot{
     constructor(bodyA, pointB){
         var options = {
             bodyA: bodyA,
@@ -24,7 +24,6 @@ class SlingShot{
             var pointA = this.sling.bodyA.position;
             var pointB = this.pointB;
             stroke(237,110,25)
-            image(this.image,this.x,this.y);
             strokeWeight(7);
             line(pointA.x ,pointA.y, pointB.x, pointB.y);
 
