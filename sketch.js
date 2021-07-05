@@ -61,17 +61,16 @@ square7.display();
 square8.display();
 square9.display();
 
-slingshot1.display();
-mouseDragged();
-mouseReleased();
+
+
 fill("gold");
 imageMode(CENTER)
 image(polygon_img, polygon.position.x,polygon.position.y, 40, 40)
 
 
+slingshot1.display();
 
 
-drawSprites()
 
 
   
