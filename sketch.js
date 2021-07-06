@@ -25,18 +25,23 @@ function preload() {
 function setup(){
     engine = Engine.create();
     world = engine.world;
-    var canvas = createCanvas(700,700);
-    square1 = new Box(225,500,30,30);
-    square2 = new Box(255,500,30,30);
-    square3 = new Box(285,500,30,30);
-    square4 = new Box(315,500,30,30);
-    square5 = new Box(345,500,30,30);
-    ground1 = new Ground(300,535,200,10)
-    square6 = new Box(270,485,30,30);
-    square7 = new Box(300,485,30,30);
-    square8 = new Box(330,485,30,30);
-    square9 = new Box(300,455,30,30);
-    
+    var canvas = createCanvas(900,400);
+    square1 = new Box(225,300,30,30);
+    square2 = new Box(255,300,30,30);
+    square3 = new Box(285,300,30,30);
+    square4 = new Box(315,300,30,30);
+    square5 = new Box(345,300,30,30);
+    ground1 = new Ground(300,335,200,10)
+    ground2 = new Ground(300,395,1200,10)
+    square6 = new Box(270,285,30,30);
+    square7 = new Box(300,285,30,30);
+    square8 = new Box(330,285,30,30);
+    square9 = new Box(300,255,30,30);
+    var options= {
+      restitution: 1,
+      friction: 1,
+      density: 1
+    }
     polygon = Bodies.circle(50,200,20);
     World.add(world,polygon)
     slingshot1 = new Slingshot(this.polygon,{x: 100, y:200});
@@ -45,6 +50,7 @@ function setup(){
 
 
 function draw(){
+Engine.update(engine);
 background("black")
 
 
@@ -60,6 +66,7 @@ square6.display();
 square7.display();
 square8.display();
 square9.display();
+ground2.display();
 
 
 
