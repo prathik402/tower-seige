@@ -42,9 +42,9 @@ function setup(){
       friction: 1,
       density: 1
     }
-    polygon = Bodies.circle(50,200,20);
+    polygon = Bodies.circle(700,200,20);
     World.add(world,polygon)
-    slingshot1 = new Slingshot(this.polygon,{x: 100, y:200});
+    slingshot1 = new Slingshot(this.polygon,{x: 600, y:200});
 }
 
 
@@ -89,4 +89,9 @@ function mouseDragged(){
 
 function mouseReleased(){
   slingshot1.fly();
+}
+function keyPressed(){
+  if(keyCode === 32){
+    slingshot1.attach(this.polygon)
+  }
 }
