@@ -26,17 +26,17 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
     var canvas = createCanvas(900,400);
-    square1 = new Box(225,300,30,30);
-    square2 = new Box(255,300,30,30);
-    square3 = new Box(285,300,30,30);
-    square4 = new Box(315,300,30,30);
-    square5 = new Box(345,300,30,30);
+    square1 = new Box(225,295,30,30);
+    square2 = new Box(255,295,30,30);
+    square3 = new Box(285,295,30,30);
+    square4 = new Box(315,295,30,30);
+    square5 = new Box(345,295,30,30);
     ground1 = new Ground(300,335,200,10)
     ground2 = new Ground(300,395,1200,10)
-    square6 = new Box(270,285,30,30);
-    square7 = new Box(300,285,30,30);
-    square8 = new Box(330,285,30,30);
-    square9 = new Box(300,255,30,30);
+    square6 = new Box(270,275,30,30);
+    square7 = new Box(300,275,30,30);
+    square8 = new Box(330,275,30,30);
+    square9 = new Box(300,265,30,30);
     var options= {
       restitution: 1,
       friction: 1,
